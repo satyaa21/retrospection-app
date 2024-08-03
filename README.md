@@ -47,13 +47,26 @@ retrospection-app
 
 To run the application, follow these steps:
 
-1. Install the dependencies listed in `package.json` by running `npm install`.
-2. Start the development server by running `npm start`.
-3. Open the application in your browser at `http://localhost:3000`.
+
+1. Navigate to the project directory:
+```
+cd /c:/Satya Professional/pets/retro/code/retro-app/retrospection-app/
+```
+
+2. Install dependencies:
+```
+npm install
+```
+
+3. Running the App:
+To start the development server, run:
+```
+npm start
+```
+
+4. Open the application in your browser at `http://localhost:3000`
+
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
-```
-
-Please note that the above contents are a template and may need to be customized based on your specific project requirements.
