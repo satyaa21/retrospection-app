@@ -25,9 +25,7 @@ a {
 }
 
 #retro-root > .header {
-    background-color: rgb(79 107 223);
-    color: white;
-    padding: 10px;
+    margin-bottom: 10px;
 }
 
 #retro-root > .root-container {
