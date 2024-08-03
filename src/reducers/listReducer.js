@@ -6,7 +6,7 @@ const initialState = {
   lists: [
     {
       id: `list-${uuidv4()}`,
-      title: 'Todo',
+      title: 'Keep Doing',
       color: 'red',
       cards: [{
         id: `card-${uuidv4()}`,
@@ -17,7 +17,7 @@ const initialState = {
       }]
     }, {
       id: `list-${uuidv4()}`,
-      title: 'In Progress',
+      title: 'Stop Doing',
       color: 'green',
       cards: [{
         id: `card-${uuidv4()}`,
@@ -25,7 +25,7 @@ const initialState = {
       }]
     }, {
       id: `list-${uuidv4()}`,
-      title: 'Done',
+      title: 'Went well',
       color: 'blue',
       cards: [{
         id: `card-${uuidv4()}`,
@@ -34,6 +34,17 @@ const initialState = {
         id: `card-${uuidv4()}`,
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur ducimus explicabo harum ipsa, iusto odit quia quis reiciendis repudiandae? Adipisci aperiam aspernatur atque, beatae culpa cupiditate eos et fugiat fugit, laudantium libero necessitatibus odit perspiciatis quam quis repellendus sunt! Aut eos laudantium, maxime nulla quos tenetur? Adipisci asperiores at aut beatae consectetur doloribus earum eum exercitationem facere id incidunt ipsum, iusto laboriosam maxime necessitatibus neque nisi perspiciatis placeat quas sint sunt tempore ullam voluptatem. Accusantium autem itaque modi nemo perspiciatis rerum? At, aut consequuntur dolorem ea esse est exercitationem expedita harum, ipsa laboriosam laborum nihil nulla odit ut vitae.'
       }, {
+        id: `card-${uuidv4()}`,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. '
+      }]
+    }, {
+      id: `list-${uuidv4()}`,
+      title: 'Not Went well',
+      color: 'blue',
+      cards: [{
+        id: `card-${uuidv4()}`,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autemiam voluptate voluptatum!'
+      },  {
         id: `card-${uuidv4()}`,
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. '
       }]
