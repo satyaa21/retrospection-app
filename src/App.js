@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import ErrorBoundary from './components/ErrorBoundary';
-import Home from './components/Home';
-import Settings from './components/Settings';
-import Dashboard from './components/Dashboard';
+import ErrorBoundary from './root-components/ErrorBoundary';
+import Home from './root-components/Home';
+import Settings from './root-components/Settings';
+import Dashboard from './root-components/Dashboard';
 
 function App() {
   return (
