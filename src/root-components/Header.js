@@ -9,6 +9,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles } from '@material-ui/core/styles';
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   navArea: {
@@ -29,18 +30,8 @@ function Header() {
   const location = useLocation();
   const classes = useStyles();
 
-  const getTitle = (path) => {
-    switch (path.toLowerCase()) {
-      case '/':
-      case '/home':
-        return 'Home';
-      case '/settings':
-        return 'Settings';
-      case '/dashboard':
-        return 'Dashboard';
-      default:
-        return 'Retrospection App';
-    }
+  const getTitle = () => {
+    return 'Retrospection';
   };
 
   const pages = ['Home', 'Dashboard', 'Settings'];
@@ -64,13 +55,26 @@ function Header() {
           </Typography>
 
           <Box className={classes.navArea}>
-          {pages.map((page, i) => (
-            <MenuItem key={page} className={classes.link + ' ' + (location.pathname.toLowerCase() === `/${pagePaths[i].toLowerCase()}` ? classes.activeLink : '')}>
-              <a href={`/${pagePaths[i].toLowerCase()}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                <Typography textalign="center">{page}</Typography>
-              </a>
-            </MenuItem>
-          ))}
+            {pages.map((page, i) => (
+              <MenuItem
+                key={page}
+                className={
+                  classes.link +
+                  ' ' +
+                  (location.pathname.toLowerCase() ===
+                  `/${pagePaths[i].toLowerCase()}`
+                    ? classes.activeLink
+                    : '')
+                }
+              >
+                <Link
+                  to={`/${pagePaths[i].toLowerCase()}`}
+                  style={{ textDecoration: 'none', color: 'inherit' }}
+                >
+                  <Typography textalign="center">{page}</Typography>
+                </Link>
+              </MenuItem>
+            ))}
           </Box>
         </Toolbar>
       </AppBar>
