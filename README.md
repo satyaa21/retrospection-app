@@ -48,9 +48,9 @@ retrospection-app
 To run the application, follow these steps:
 
 
-1. Navigate to the project directory:
+1. Clone the repo and navigate to directory:
 ```
-cd /c:/Satya Professional/pets/retro/code/retro-app/retrospection-app/
+cd retrospection-app
 ```
 
 2. Install dependencies:
