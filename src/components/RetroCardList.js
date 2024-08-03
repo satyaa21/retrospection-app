@@ -9,22 +9,24 @@ const useStyles = makeStyles({
   root: {
     position: 'relative',
     backgroundColor: '#ebecf0',
-    borderRadius: 3,
-    padding: 8,
-    margin: 16,
     flex: '0 0 300px',
+    border: '1px solid rgb(227 229 231)',
+    height: '100%'
   },
   container: {
-    overflowY: 'scroll',
-    maxHeight: 600,
+    padding: 8,
+    overflowY: 'auto',
+    flex: '1 1 auto',
   },
   title: {
-    padding: '4px 8px'
+    padding: '4px 8px',
+    fontSize: '1rem',
+    boxShadow: '0px 2px 5px rgb(190 194 197)',
   }
 });
 
 const RetroCardList = (props) => {
-  const { listID, title, cards } = props;
+  const { listID, title, color, cards } = props;
   const classes = useStyles();
 
   const retroCards = cards.map((card, index) => (
@@ -32,6 +34,7 @@ const RetroCardList = (props) => {
       key={card.id}
       card={card}
       listID={listID}
+      color={color}
       index={index}/>
   ));
 

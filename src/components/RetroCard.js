@@ -19,6 +19,19 @@ const useStyles = makeStyles({
   root: {
     marginBottom: 8,
     transition: 'all .4s',
+    boxShadow: '4px 6px 5px 0px rgba(0,0,0,0.2)',
+  },
+  redCard: {
+    borderLeft: '4px solid red',
+  },
+  greenCard: {
+    borderLeft: '4px solid green',
+  },
+  blueCard: {
+    borderLeft: '4px solid blue',
+  },
+  orangeCard: {
+    borderLeft: '4px solid orange',
   },
   title: {
     fontWeight: 'bold',
@@ -30,7 +43,7 @@ const useStyles = makeStyles({
 });
 
 const RetroCard = (props) => {
-  const { card, index } = props;
+  const { card, index, color } = props;
   const classes = useStyles();
 
   return (
@@ -43,15 +56,9 @@ const RetroCard = (props) => {
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}>
-            <Card className={classes.root}>
+            <Card className={`${classes.root} ${classes[color+'Card']}`}>
               <CardContent>
-                <Typography
-                  className={classes.title}
-                  variant="h6"
-                  component="h4"
-                  gutterBottom>
-                  {card.title}
-                </Typography>
+
 
                 <Typography
                   variant="body2"

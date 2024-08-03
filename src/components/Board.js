@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography } from '@material-ui/core';
 import { DragDropContext } from 'react-beautiful-dnd';
 import Grid from '@material-ui/core/Grid';
 
@@ -11,9 +10,7 @@ import { sort } from '../actions';
 const useStyles = makeStyles({
   container: {
     display: 'flex',
-    flexDirection: 'column',
-    padding: '0 16px',
-    backgroundColor: '#4b4b4bab'
+    flexDirection: 'column'
   },
   row: {
     display: 'flex',
@@ -48,23 +45,17 @@ const Board = (props) => {
     sort(source, destination, draggableId);
   };
 
-  const RetroList = board.lists.map(({ id, title, cards }) => (
+  const RetroList = board.lists.map(({ id, title, color, cards }) => (
     <RetroCardList
       key={id}
       listID={id}
       title={title}
+      color={color}
       cards={cards}/>
   ));
 
   return (
     <Grid container className={classes.container}>
-      <Typography
-        className={classes.title}
-        variant="h3"
-        component="h1">
-        Retro Board
-      </Typography>
-
       <DragDropContext onDragEnd={onDragEnd}>
         <Grid item className={classes.row}>
           {RetroList}
