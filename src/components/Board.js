@@ -12,7 +12,8 @@ const useStyles = makeStyles({
   container: {
     display: 'flex',
     flexDirection: 'column',
-    padding: '0 16px'
+    padding: '0 16px',
+    backgroundColor: '#4b4b4bab'
   },
   row: {
     display: 'flex',
@@ -61,7 +62,7 @@ const Board = (props) => {
         className={classes.title}
         variant="h3"
         component="h1">
-        React  Clone
+        Retro Board
       </Typography>
 
       <DragDropContext onDragEnd={onDragEnd}>
